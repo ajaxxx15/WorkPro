@@ -1,0 +1,484 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "projectDomain": "IT",
+      "projectName": "erwhtegte",
+      "projectOwnerEmail": "ccgagc@gmail.com",
+      "projectDesc": "4tfrwrwf",
+      "status": "open",
+      "skills": [
+        {
+          "yearsOfExp": "1",
+          "level": "advance",
+          "skillName": "wvdw"
+        },
+        {
+          "yearsOfExp": "1",
+          "level": "advance",
+          "skillName": "wvdwsdd"
+        }
+      ],
+      "bid": [
+        {
+          "bidDuration": "100",
+          "bidPrefrence": "Onsite",
+          "bidLocation": "bxFXS",
+          "bidRate": 1200
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "freelancers" : [
+    {
+      "name": "Sadie Olson",
+      "email": "sadieolson@pharmex.com",
+      "skills": " Android / Java / Mobile App Development / MySQL / PHP ",
+      "profilePicUrl": "../assets/images/dummy-user.png"
+    },
+    
+    {
+      "name": "Eileen Harris",
+      "email": "eileenharris@pharmex.com",
+      "skills": " Android / iPhone / Mobile App Development / Objective C / Swift",
+      "profilePicUrl": "../assets/images/dummy-user.png"
+    },
+    {
+      "name": "Arline Skinner",
+      "email": "arlineskinner@pharmex.com",
+      "skills": " Android / Java / Mobile App Development",
+      "profilePicUrl": "../assets/images/dummy-user.png"
+    },
+    {
+      "name": "Garza Terrell",
+      "email": "garzaterrell@pharmex.com",
+      "skills": " Android / Ionic Framework / iOS Development / iPhone node.js ",
+      "profilePicUrl": "../assets/images/dummy-user.png"
+    }
+  ],
+  "projects": [
+    {
+      "name": "RPG Game",
+      "id": 0,
+      "description": "Have to create some buttons for the description given ",
+      "Skills": "Java / SpringBoot"
+    },
+    {
+      "name": "MultiUser Jade Framework",
+      "id": 1,
+      "description": "Developing a multi-agent platform to test already existed method.",
+      "Skills": "HTML / CSS / JQuery"
+    },
+    {
+      "name": "windows server 2012 R2",
+      "id": 2,
+      "description": "Goal is simple, I need only to configure windows server 2012 R2 to support test authentication using [login to view URL].",
+      "Skills": "Android / jQuery / Prototype / Mobile App Development"
+    },
+    {
+      "name": "Telecash Payment gateway",
+      "id": 3,
+      "description": "I need to develop a small java based web application which will work between telecash payment gateway and .net website. Please bid only if you are experienced/serious freelancer.",
+      "Skills": "Prototype / Mobile App Development / PhoneGap / Technical Support"
+    },
+    {
+      "name": "Build Selenium Framework",
+      "id": 4,
+      "description": "I have a Java+Selenium framework, which is not following the code standards, and not included the proper maven repositories etc.",
+      "Skills": "Java / Android / jQuery / Prototype"
+    },
+    {
+      "name": "Build Selenium Framework",
+      "id": 4,
+      "description": "I have a Java+Selenium framework, which is not following the code standards, and not included the proper maven repositories etc.",
+      "Skills": "Java / Selenium"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "xyz": [
+    {
+      "name": "Biswadeep",
+      "Email": "hdh",
+      "location": "htd",
+      "SkillName": "ht",
+      "level": "BEGINNER",
+      "SkillExp": "hjtd",
+      "Hours": "hfs",
+      "experience": "sdasd",
+      "skills": [
+        {
+          "yearsOfExp": "hjtd",
+          "level": "BEGINNER",
+          "skillName": "ht"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "Biswadeep",
+      "Email": "hdh",
+      "location": "htd",
+      "SkillName": "ht",
+      "level": "BEGINNER",
+      "SkillExp": "hjtd",
+      "Hours": "hfs",
+      "experience": "sdasd",
+      "skills": [
+        {
+          "yearsOfExp": "10",
+          "level": "advance"
+        },
+        {
+          "yearsOfExp": "10",
+          "level": "begineers",
+          "skillName": "aaa"
+        }
+      ],
+      "bid": [
+        {
+          "bidDuration": "100",
+          "bidPrefrence": "Onsite",
+          "bidLocation": "aa",
+          "bidRate": 1000
+        }
+      ],
+      "id": 22
+    },
+    {
+      "aboutme": "kjdbkjv",
+      "name": ",n v  dbvf, ",
+      "Email": "kdsbvksbv",
+      "location": "svsvs",
+      "SkillName": "fevf",
+      "level": "BEGINNER",
+      "SkillExp": "5",
+      "Hours": "wd",
+      "DomainName": "entertainment",
+      "DomainExperience": "3",
+      "Link": "hveivondfmv.",
+      "skills": [
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        }
+      ],
+      "domain": [
+        {
+          "domainName": "it",
+          "yearsOfExp": "5"
+        },
+        {
+          "domainName": "entertainment",
+          "yearsOfExp": "3"
+        }
+      ],
+      "link": [
+        {
+          "link": "hveivondfmv."
+        },
+        {
+          "link": "hveivondfmv."
+        }
+      ],
+      "id": 23
+    },
+    {
+      "aboutme": "kjdbkjv",
+      "name": ",n v  dbvf, ",
+      "Email": "kdsbvksbv",
+      "location": "svsvs",
+      "SkillName": "fevf",
+      "level": "BEGINNER",
+      "SkillExp": "5",
+      "Hours": "wd",
+      "DomainName": "entertainment",
+      "DomainExperience": "3",
+      "Link": "hveivondfmv.",
+      "skills": [
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        },
+        {
+          "yearsOfExp": "5",
+          "level": "BEGINNER",
+          "skillName": "fevf"
+        }
+      ],
+      "domain": [
+        {
+          "domainName": "it",
+          "yearsOfExp": "5"
+        },
+        {
+          "domainName": "entertainment",
+          "yearsOfExp": "3"
+        }
+      ],
+      "link": [
+        {
+          "link": "hveivondfmv."
+        },
+        {
+          "link": "hveivondfmv."
+        }
+      ],
+      "id": 24
+    },
+    {
+      "aboutme": "",
+      "name": "",
+      "Email": "",
+      "location": "",
+      "SkillName": "",
+      "level": "",
+      "SkillExp": "",
+      "Hours": "",
+      "DomainName": "",
+      "DomainExperience": "",
+      "Link": "",
+      "skills": [],
+      "domain": [],
+      "link": [],
+      "id": 25
+    },
+    {
+      "aboutme": "",
+      "name": "Aprajita Bajpai",
+      "email": "apbajpa1@gmail.com",
+      "location": "banglore",
+      "SkillName": "django",
+      "level": "BEGINNER",
+      "SkillExp": "1",
+      "Hours": "20",
+      "DomainName": "qq",
+      "DomainExperience": "2",
+      "Link": "yhfissnmf",
+      "skills": [
+        {
+          "yearsOfExp": "1",
+          "level": "BEGINNER",
+          "skillName": "flask"
+        },
+        {
+          "yearsOfExp": "1",
+          "level": "BEGINNER",
+          "skillName": "django"
+        }
+      ],
+      "domain": [
+        {
+          "domainName": "qq",
+          "yearsOfExp": "2"
+        }
+      ],
+      "link": [],
+      "id": 26
+    },
+    {
+      "aboutme": "Space enthusiast",
+      "name": "Biswadeep Bhattacharjee",
+      "email": "biswbha1@in.ibm.com",
+      "location": "blr",
+      "SkillName": "java",
+      "level": "INTERMEDIATE",
+      "SkillExp": "2",
+      "Hours": "20",
+      "DomainName": "it",
+      "DomainExperience": "2",
+      "Link": "nlkcsflnlkfsv",
+      "skills": [
+        {
+          "yearsOfExp": "1",
+          "level": "BEGINNER",
+          "skillName": "angular"
+        },
+        {
+          "yearsOfExp": "2",
+          "level": "INTERMEDIATE",
+          "skillName": "java"
+        }
+      ],
+      "domain": [
+        {
+          "domainName": "it",
+          "yearsOfExp": "2"
+        }
+      ],
+      "link": [],
+      "id": 27
+    },
+    {
+      "aboutme": "",
+      "name": "",
+      "email": "",
+      "location": "",
+      "SkillName": "",
+      "level": "",
+      "SkillExp": "",
+      "Hours": "",
+      "DomainName": "",
+      "DomainExperience": "",
+      "Link": "",
+      "skills": [],
+      "domain": [],
+      "link": [],
+      "id": 28
+    },
+    {
+      "aboutme": "",
+      "name": "",
+      "email": "",
+      "location": "",
+      "SkillName": "X CS1",
+      "level": "BEGINNER",
+      "SkillExp": "12",
+      "Hours": "4",
+      "DomainName": "it1",
+      "DomainExperience": "qfe",
+      "Link": "wgrgrsvds",
+      "skills": [],
+      "domain": [
+        {
+          "domainName": "it",
+          "yearsOfExp": "qfe"
+        },
+        {
+          "domainName": "it1",
+          "yearsOfExp": "qfe"
+        }
+      ],
+      "link": [
+        {
+          "link": "wgrgrsvds"
+        }
+      ],
+      "id": 29
+    }
+  ],
+  "po": {
+    "name": "Aprajita Bajpai",
+    "email": "apbajpa1@gmail.com",
+    "address": "banglore",
+    "contact": 99999999999,
+    "location": "banglore",
+    "preference": "REMOTE"
+  },
+  "auth":{
+    "user": {
+        "id": 1,
+        "firstName": "Aprajitaa",
+        "lastName": "Bhajpai",
+        "email": "aprajithaa8711@gmail.com",
+        "password": "$2a$10$PQQKZwN9bOOu3pvABRUtIeSHsa6XjZ4q7cRTZt3ncey3i4d4ZFr9e",
+        "enable": true,
+        "role": "USER",
+        "phonenumber": "9741084525",
+        "date": "2019-04-04T09:46:19.000+0000"
+    },
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHJhaml0aGFhODcxMUBnbWFpbC5jb20iLCJjcmVhdGVkIjoxNTU0MzcxMTg5ODE5LCJleHAiOjE1NTQ5NzU5ODl9.7ZPdpMB4R9HJOFMRerwkqxKDjODEp9D-V-Oyt51BrG95yQmJN7w8w8sHTlVK--peDqvouMLNUabLbATyfrNuPw"
+ },
+ "freelancers":[
+  {
+    "name": "Arline Skinner",
+    "email": "arlineskinner@pharmex.com",
+    "skills": " Android / Java / Mobile App Development",
+    "profilePicUrl": "https://previews.123rf.com/images/pandavector/pandavector1704/pandavector170406117/76645972-man-with-beard-icon-flat-single-avatar-icon-.jpg"
+  },
+  {
+    "name": "Cristina Bernard",
+    "email": "cristinabernard@pharmex.com",
+    "skills": " Android / jQuery / Prototype / Mobile App Development / PhoneGap / Technical Support ",
+    "profilePicUrl": "https://previews.123rf.com/images/pandavector/pandavector1704/pandavector170406117/76645972-man-with-beard-icon-flat-single-avatar-icon-.jpg"
+  },
+  {
+    "name": "Sadie Olson",
+    "email": "sadieolson@pharmex.com",
+    "skills": " Android / Java / Mobile App Development / MySQL / PHP ",
+    "profilePicUrl": "https://previews.123rf.com/images/pandavector/pandavector1704/pandavector170406117/76645972-man-with-beard-icon-flat-single-avatar-icon-.jpg"
+  },
+  {
+    "name": "Eileen Harris",
+    "email": "eileenharris@pharmex.com",
+    "skills": " Android / iPhone / Mobile App Development / Objective C / Swift",
+    "profilePicUrl": "https://previews.123rf.com/images/pandavector/pandavector1704/pandavector170406117/76645972-man-with-beard-icon-flat-single-avatar-icon-.jpg"
+  },
+  {
+    "name": "Garza Terrell",
+    "email": "garzaterrell@pharmex.com",
+    "skills": " Android / Ionic Framework / iOS Development / iPhone node.js ",
+    "profilePicUrl": "https://previews.123rf.com/images/pandavector/pandavector1704/pandavector170406117/76645972-man-with-beard-icon-flat-single-avatar-icon-.jpg"
+  }
+]
+}

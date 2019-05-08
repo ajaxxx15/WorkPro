@@ -1,0 +1,78 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//fonts.googleapis.com/css?family=Hind" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<div class="jumbotron jumbotron-dark">
+  <div class="container">
+    <div class="col-lg-5">
+
+      <h2>Hire expert freelancers for any job, online</h2>
+      <h4>
+        Millions of small businesses use Freelancer to turn their ideas into reality.
+      </h4>
+      <p class="lead">We make Things Happen!</p>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for Projects" name="search" #search type="search">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="searchProject(search.value)">Search</button>
+        </span>
+      </div>
+      <br>
+
+    </div>
+    <div class="col-lg-6">
+      <img class="img-responsive" src="../assets/images/img1.png/">
+    </div>
+  </div>
+</div>
+<!-- TOP FREELANCERS -->
+<p class="TopFreelancers">Top Freelancers</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let freelancer of freelancerArray" class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="our-team">
+        <div class="picture">
+          <img class="img-fluid" src="../assets/images/avatar.jpg">
+        </div>
+        <div class="team-content">
+          <h3 class="name">{{freelancer.freelancerName}}</h3>
+          <h4 class="title">{{freelancer.skills}}</h4>
+        </div>
+        <button class="btn btn-primary" (click)="openDialog(freelancer.freelancerName,freelancer.skills)">View Profile</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Top Projects -->
+<p class="TopProjects">Top Projects</p>
+<div class="container">
+  <div class="row1">
+    <div *ngFor="let project of projectsArray" class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="project project-info">
+        <div class="shape">
+          <div class="shape-text">
+            top
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="lead">
+            {{project.projectName}}
+          </h3>
+          <!-- <p style="color:blue">
+            {{project.skills}}
+          </p> -->
+          <button class="btn btn-primary" type="button" routerLink="/detailsview/{{project.ProjectId}}/{{project.projectOwnerEmailId}}">View details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

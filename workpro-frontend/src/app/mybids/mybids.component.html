@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="container d-flex justify-content-center mt-4">
+    <div class="btn btn-outline-primary col-md-2 mr-2" (click)="filterOpenBids()" role="group" aria-label="...">Open
+      Bids</div>
+    <div class="btn btn-outline-primary  col-md-2 mr-2" role="group" (click)="filterCloseBids()" aria-label="...">Closed
+      Bids</div>
+    <div class="btn btn-outline-primary  col-md-2 mr-2" role="group" (click)="filterWonBids()" aria-label="...">Bids won
+    </div>
+
+  </div>
+  <div *ngFor="let project of projects">
+    <app-mybidscard [project]="project">
+
+    </app-mybidscard>
+  </div>
+</div>

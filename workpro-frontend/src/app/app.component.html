@@ -1,0 +1,82 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--Navbar -->
+<nav class="mb-0 navbar navbar-expand-lg navbar navbar-expand-lg navbar-dark secondary-color lighten-1">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <span class="navbar-toggler-icon "></span>
+  </button>
+  <a class="navbar-brand ml-2" href="#">WorkPro</a>
+</nav>
+
+<mat-sidenav-container class="example-container">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <div class="inner">
+      <div class="container-logo">
+        <img src="../assets/images/logo5.png" alt="logo" style="margin-bottom:10px" />
+      </div>
+      <br /><br />
+      <mat-divider></mat-divider>
+
+      <div *ngIf="!isLogin">
+        <mat-nav-list>
+          <mat-list-item>
+            <a class="nav-link" [routerLink]="['/register']">Register</a>
+          </mat-list-item>
+          <mat-list-item>
+            <a class="nav-link" [routerLink]="['/login']">Login</a>
+          </mat-list-item>
+          <mat-list-item>
+            <a class="nav-link" href="#">About Us</a>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
+
+      <div *ngIf="role == 'ADMIN'; else elseBlock">
+        <mat-nav-list style="margin-top: 40px">
+          <mat-list-item>
+            <a class="nav-link" routerLink="podashboard">Dashboard</a>
+          </mat-list-item>
+          <mat-list-item>
+            <a class="nav-link" routerLink="productownermyprojects">My project</a>
+          </mat-list-item>
+          <mat-list-item>
+            <a class="nav-link" routerLink="poprofile">My Profile</a>
+          </mat-list-item>
+
+          <mat-list-item>
+            <a class="nav-link" routerLink="" (click)="logout()">Logout</a>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
+
+      <ng-template #elseBlock>
+        <div *ngIf="role == 'USER'; else elseBlock1">
+          <mat-nav-list>
+            <mat-list-item>
+              <a class="nav-link" routerLink="userdashboard">Dashboard</a>
+            </mat-list-item>
+
+            <mat-list-item>
+              <a class="nav-link" routerLink="freelancerprofile">My Profile</a>
+            </mat-list-item>
+
+            <mat-list-item>
+              <a class="nav-link" routerLink="mybids">My Bids</a>
+            </mat-list-item>
+            <mat-list-item>
+              <a class="nav-link" routerLink="" (click)="logout()">Logout</a>
+            </mat-list-item>
+          </mat-nav-list>
+        </div>
+      </ng-template>
+    </div>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
+
+<footer class="page-footer font-small blue">
+  <div class="footer-copyright text-center py-3" style="color:white">
+    © 2019 Copyright:
+    <a href="https://mdbootstrap.com/education/angular/" style="color:white">
+      workpro.stackroute.io</a>
+  </div>
+</footer>

@@ -1,0 +1,22 @@
+<div class="card-body row">
+  <div class="col-md-2">
+
+    <img style="height: 150px; width:150px" src="../assets/images/avatar.jpg" alt="freelancer">
+
+  </div>
+
+  <div class="col-md-10">
+    <h5 class="card-title">{{freelancer.freelancerName}}</h5>
+
+    <p class="card-text">{{freelancer.freelancerEmail}}</p>
+
+
+    <p class="card-text" style="color:blue">{{freelancer.skills}}</p>
+
+    <button class="card-link btn btn-primary"
+      routerLink="/freelancerprofile/{{freelancer.freelancerEmail}}">Details</button>
+
+    <button class="card-link btn btn-warning"
+      routerLink="/invitefreelancer/{{freelancer.freelancerEmail}}">Invite</button>
+  </div>
+</div>

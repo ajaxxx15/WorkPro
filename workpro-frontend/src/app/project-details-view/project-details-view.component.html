@@ -1,0 +1,17 @@
+<div class="container">
+
+    <div class="flex-container">
+        <div class="card">
+            <div class="card-body">
+                <h1>{{project.projectName}}</h1>
+                <p class=card-text>{{project.projectDescription}}</p>
+                <div *ngFor="let skill of skills">
+                    <p class="skill">{{skill}}</p>
+                </div>
+                <p *ngIf="isLoggedIn">
+                    <button class="btn btn-outline-secondary" (click)="openDialog()">Bid</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

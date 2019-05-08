@@ -1,0 +1,69 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//fonts.googleapis.com/css?family=Hind" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+
+<div class="jumbotron jumbotron-dark">
+  <div class="container">
+    <div class="col-lg-5">
+
+      <h2>Hire expert freelancers for any job, online</h2>
+      <h4>
+        Millions of small businesses use Freelancer to turn their ideas into reality.
+      </h4>
+      <p class="lead">We make Things Happen!</p>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for Projects" name="search" #search type="search">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="searchProject(search.value)">Search</button>
+        </span>
+      </div>
+      <br>
+
+    </div>
+    <div class="col-lg-6">
+      <img class="img-responsive" src="../assets/images/img1.png/">
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isSearch; else elseBlock1">
+    <p class="TopProjects">Projects</p>
+
+<div class="container" *ngFor="let project of projectsArray">
+    <div class="card-holder">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">{{project.projectName}}</h3>
+          <p class="card-text">{{project.projectDescription}}</p>
+          <!-- <p class="card-text1" style="color: blue">{{project.skillsSetList}}</p> -->
+          <button class="card-link btn btn-primary"
+            routerLink="/projectDetailsComponent/{{project.ProjectId}}/{{project.projectOwnerEmailId}}">Details</button>
+          <!-- <button class="card-link btn btn-warning">Bid</button>  -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<ng-template #elseBlock1>
+<div class="container" *ngIf="!message; else elseBlock2">
+    <p class="TopProjects">Projects</p>
+  <div *ngFor="let project of projects">
+
+    <app-project-card-user-dashboard [project]=project></app-project-card-user-dashboard>
+  </div>
+</div>
+<ng-template #elseBlock2>
+<div class="container mt-5">
+  <h6>NO RESULT FOUND</h6>
+</div>
+</ng-template>
+</ng-template>

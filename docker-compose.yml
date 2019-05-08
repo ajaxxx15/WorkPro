@@ -1,0 +1,213 @@
+version: '2'
+
+services:
+
+  eureka-server:
+    build: eureka-server/
+    restart: always
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8761:8761
+
+
+  config-service:
+    build: config-server/
+    restart: always
+    network_mode: "host"
+    image: demo-config-service
+    hostname: localhost
+    ports:
+      - 8888:8888
+
+  zuul-apigateway:
+    build: zuul-api/
+    depends_on:
+      - config-service
+      - eureka-server
+      - freelancer-profile-service
+      - reglogin-service
+      - project-details-service
+      - project-owner-profile-service
+    restart: always
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8080:8080
+
+  mongo:
+    image: mongo:3.4-jessie
+    ports:
+      - 27017:27017
+    expose:
+      - 27017
+    container_name: mongo-service
+    network_mode: "host"
+    hostname: localhost
+    volumes:
+      - /data/mongo:/data/db
+
+
+  mysql:
+    image: mysql:5.7
+    restart: always
+    container_name: mysql
+    network_mode: "host"
+    hostname: localhost
+    environment:
+      MYSQL_ROOT_PASSWORD: Root@123
+      MYSQL_DATABASE: userdb
+      MYSQL_PASSWORD: Root@123
+    volumes:
+      - /data/mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  zookeeper:
+    container_name: zookeeper
+    image: zookeeper:latest
+    restart: always
+    ports:
+      - 2181:2181
+    expose:
+      - 2181
+    network_mode: "host"
+    hostname: localhost
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000000000
+
+  kafka:
+    container_name: kafka
+    image: wurstmeister/kafka:latest
+    restart: always
+    ports:
+      - 9092:9092
+    expose:
+      - 9092
+    depends_on:
+      - zookeeper
+    network_mode: "host"
+    hostname: localhost
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_HOST_NAME: localhost
+      KAFKA_ZOOKEEPER_CONNECT: localhost:2181
+      KAFKA_MESSAGE_MAX_BYTES: 1000000000
+
+
+  reglogin-service:
+    build: login-service/
+    restart: always
+    network_mode: "host"
+    image: demo-reg-login
+    hostname: localhost
+    ports:
+      - 8081:8081
+    depends_on:
+      - mysql
+      - eureka-server
+
+  freelancer-profile-service:
+    build: freelancer-profile-service/
+    restart: always
+    network_mode: "host"
+    image: freelancer-profile-service
+    hostname: localhost
+    ports:
+      - 8082:8082
+    depends_on:
+      - mongo
+      - zookeeper
+      - kafka
+      - eureka-server
+
+  project-details-service:
+    build: project-details-service/
+    restart: always
+    network_mode: "host"
+    image: project-detail-service
+    hostname: localhost
+    ports:
+      - 8090:8090
+    depends_on:
+      - mongo
+      - zookeeper
+      - kafka
+      - eureka-server
+
+  project-owner-profile-service:
+    build: project-owner-profile-service/
+    restart: always
+    network_mode: "host"
+    image: project-owner-profile-service
+    hostname: localhost
+    ports:
+      - 8083:8083
+    depends_on:
+      - mongo
+      - eureka-server
+
+  workpro-frontend:
+    image: workpro-frontend
+    build: workpro-frontend/
+    container_name: workpro-frontend
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 8000:8000
+    restart: always
+
+  prom:
+    image: quay.io/prometheus/prometheus:v2.0.0
+    volumes:
+      - /data/prometheus.yml:/etc/prometheus/prometheus.yml
+    command: "--config.file=/etc/prometheus/prometheus.yml --storage.tsdb.path=/prometheus"
+    ports:
+      - 9090:9090
+    depends_on:
+      - exporter
+
+  exporter:
+    image: prom/node-exporter:latest
+    ports:
+      - "9100:9100"
+    network_mode: "host"
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prom
+    network_mode: "host"
+    hostname: localhost
+
+  neo4j:
+    image: neo4j:3.5.3
+    ports:
+      - 7474:7474
+      - 7687:7687
+
+    container_name: neo4j_docker
+    network_mode: "host"
+    hostname: localhost
+    restart: always
+    volumes:
+      - /data/neo4j/data:/data
+      - /data/neo4j/import:/import
+    environment:
+      - NEO4J_AUTH=none
+
+
+  recommendation-service:
+    build: rrecommendation-service/
+    restart: always
+    network_mode: "host"
+    expose:
+      - 8075
+    hostname: localhost
+    ports:
+      - 8075:8075
+    depends_on:
+      - neo4j

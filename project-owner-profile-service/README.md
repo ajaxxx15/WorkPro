@@ -1,0 +1,2 @@
+This is a service which generates a profile for projectOwner.
+This contains two api's, in which one of them is to post the details which helps in generation of profile and another one is to display the profile.

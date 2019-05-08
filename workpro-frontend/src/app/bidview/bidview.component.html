@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<form style="max-width:500px;margin:auto" #form=ngForm>
+  <h2>Enter Bid Details</h2>
+  <div class="input-container">
+    <div class="icon">
+      <h3><i class="fas fa-dollar-sign"></i></h3>
+    </div>
+
+    <input class="input-field" type="text" placeholder="Enter Amount" ngModel name="amount">
+  </div>
+
+  <div class="input-container">
+    <div class="icon">
+      <h3><i class="far fa-clock"></i></h3>
+    </div>
+
+    <input class="input-field" type="text" placeholder="Completion days" ngModel name="duration">
+  </div>
+
+
+  <button type="submit" class="btn" [mat-dialog-close] (click)="savebid(form.value,user)">Submit</button>
+</form>

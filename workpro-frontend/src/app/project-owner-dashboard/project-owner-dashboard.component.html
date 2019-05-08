@@ -1,0 +1,80 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//fonts.googleapis.com/css?family=Hind" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<div class="jumbotron jumbotron-dark">
+  <div class="container">
+    <div class="col-lg-5">
+
+      <h2>Hire expert freelancers for any job, online</h2>
+      <h4>
+        Millions of small businesses use Freelancer to turn their ideas into reality.
+      </h4>
+      <p class="lead">We make Things Happen!</p>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for Freelancers" name="search" #search type="search">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button" (click)="searchFreelancer(search.value)">Search</button>
+        </span>
+      </div>
+      <br>
+
+    </div>
+    <div class="col-lg-6">
+      <img class="img-responsive" src="../assets/images/img1.png/">
+    </div>
+  </div>
+</div>
+
+
+<div class="container" *ngIf="isSearch; else elseBlock1">
+    <p class="TopFreelancers">Freelancers</p>
+
+  <div class="card-body row" *ngFor="let freelancer of freelancerArray">
+    <div class="col-md-2">
+
+      <img style="height: 150px; width:150px" src="../assets/images/avatar.jpg" alt="freelancer">
+
+    </div>
+
+    <div class="col-md-10">
+      <h5 class="card-title">{{freelancer.freelancerName}}</h5>
+
+      <p class="card-text">{{freelancer.freelancerEmail}}</p>
+
+
+      <p class="card-text" style="color:blue">{{freelancer.skills}}</p>
+
+      <button class="card-link btn btn-primary"
+        routerLink="/freelancerprofile/{{freelancer.freelancerEmail}}">Details</button>
+
+      <button class="card-link btn btn-warning"
+        routerLink="/invitefreelancer/{{freelancer.freelancerEmail}}">Invite</button>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #elseBlock1>
+<div class="container" *ngIf="!message; else elseBlock2">
+    <p class="TopFreelancers">Freelancers</p>
+  <div *ngFor="let freelancer of freelancers">
+    <app-usercard-project-owner-dashboard [freelancer]=freelancer></app-usercard-project-owner-dashboard>
+  </div>
+</div>
+<ng-template #elseBlock2>
+  <div class="container mt-5">
+    <h6>
+      NO RESULT FOUND
+    </h6>
+  </div>
+
+</ng-template>
+</ng-template>
